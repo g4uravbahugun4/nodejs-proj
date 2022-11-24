@@ -1,0 +1,23 @@
+main{
+ margin: auto;
+}
+.container{
+    padding: 8px;
+    margin: 4px;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn{
+    margin-left: 10px;
+}
+.input{
+    display: none;
+}
+span{
+    color: red;
+    font-size: x-large;
+    font-weight: 600;
+}

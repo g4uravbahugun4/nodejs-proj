@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/navbar.css">
+        <link rel="stylesheet" href="/users.css">
+
+    <title>Add User</title>
+</head>
+<body>
+        <%- include('includes/navbar.ejs') %>
+    <form class="form" method="POST" action="/add-user">
+     <div class="formDiv"><label >User's Name</label><input  type="text" name="user" "><br></div>
+    <div class="formDiv"><label>Phone No</label><input type="tel" name="phone"><br></div>
+    <div class="formDiv"><label>Fathers Name</label><input type="text" name="fname" "><br></div>
+    <div class="formDiv"><label>Mothers Name </label><input type="text" name="mname" "><br></div>
+    <div class="formDiv"><label>Address</label><textarea rows="3" name="address"></textarea><br></div>
+    <div class="formDiv"><button type="submit">Add</button><br></div>
+     </form>
+</body>
+</html>

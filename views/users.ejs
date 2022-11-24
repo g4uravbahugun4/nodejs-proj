@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navbar.css">
+        <link rel="stylesheet" href="/users.css">
+
+<title>User List</title>
+</head>
+<body>
+    <%- include('includes/navbar.ejs') %>
+ <h1 >User List</h1>
+ <div class="container">
+    <form action="/attendence" method="post">
+ <ul class="listItems">
+    <% for (let user of usersdata) { %>
+    <div class="div">
+    <li >
+     <a class="names" href="/users/<%=user.id%>" > <%=user.username%> </a>   
+     </li>
+     <input type="checkbox" class="checkbox">
+     <input class="input" type="text" name="id" value=<%=user.id%> >    
+   </div>
+    <% } %>
+ </ul> 
+</form>
+</div>
+ <div class="container"><button class="btn">SUBMIT</button></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/users.css">
+    <link rel="stylesheet" href="/userDetails.css">
+
+    <title>User Details</title>
+
+</head>
+
+<body>
+    <%- include('includes/navbar.ejs') %>
+    <h1>User Details</h1>
+    <main>
+    <div class="container">Name:<span > <%= user.username%> </span></div>
+    <div class="container">Phone:<span> <%= user.phoneNo%> </span></div>
+    <div class="container">Father's Name:<span> <%= user.fathersName%> </span></div>
+    <div class="container">Mother's Name:<span> <%= user.mothersName%> </span></div>
+    <div class="container">Address:<span> <%= user.address%> </span></div>
+    <form action="/edit" method="post">
+    <input class="input" name="id" type="text" value="<%=user.id%>">
+     <div class="container"> <button class="btn">EDIT</button> </div>
+    </form>
+    </main>
+</body>
+
+</html>
