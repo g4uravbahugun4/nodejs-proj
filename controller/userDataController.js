@@ -1,4 +1,3 @@
-const userdata = require('../models/userData')
 const usersData=require('../models/userData')
 
 exports.addUserpage= (req, res) => {
@@ -28,5 +27,14 @@ exports.getUserDetail=async(req,res,next)=>{
         user:reqUser,
         path:'/user/:id'
     })
+}
 
+exports.addPresentUsers=(req,res,next)=>{
+    const presentUsers=req.body.name
+    
+    console.log(req.body.name)
+    res.render('attendence',{
+    presentUsers:presentUsers,
+    path:'/attendence'
+    })
 }

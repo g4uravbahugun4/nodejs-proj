@@ -18,15 +18,15 @@
     <% for (let user of usersdata) { %>
     <div class="div">
     <li >
-     <a class="names" href="/users/<%=user.id%>" > <%=user.username%> </a>   
-     </li>
-     <input type="checkbox" class="checkbox">
-     <input class="input" type="text" name="id" value=<%=user.id%> >    
+     <input type="checkbox" class="checkbox" name="name" value= <%=user.username%> > 
+     <label><a class="names" href="/users/<%=user.id%>"> <%=user.username%></a></label>
+     </li>  
    </div>
     <% } %>
  </ul> 
+ <div class="container"><button class="btn">SUBMIT</button></div>
 </form>
 </div>
- <div class="container"><button class="btn">SUBMIT</button></div>
+
 </body>
 </html>
